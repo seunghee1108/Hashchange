@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HashChange Example</title>
 </head>
 <body>
@@ -18,15 +18,15 @@
     window.addEventListener("hashchange", () => {
       const hash = window.location.hash;
       const pageName = hash.substring(1);
-      renderPage(pageNq);
+      renderPage(pageName);
     });
 
-    const page = {
-      Woogin : "김우진",
-      Seunghee : "방승희",
-      Youngsik : "정영식",
-      Sungmin : "최성민",
-    }
+    const pages = {
+      Woojin: "김우진",
+      Seunghee: "방승희",
+      Youngsik: "정영식",
+      Sungmin: "최성민",
+    };
 
     function renderPage(pageName) {
       const root = document.getElementById("root");
@@ -35,7 +35,6 @@
       root.style.display = "none";
       hashpage.innerHTML = pages[pageName];
     }
-    
   </script>
 </body>
 </html>
