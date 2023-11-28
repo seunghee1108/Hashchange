@@ -16,7 +16,11 @@
   <script type="module" src="app.js"></script>
   <script>
     window.addEventListener("hashchange", () => {
+      // 현재 문서의 URL에서 해시 부분을 가져와서 hash 변수에 저장하는 코드
+      // 변경 이벤트를 감지하고 해당 해시를 사용하여 페이지를 업데이트하는 데 사용
       const hash = window.location.hash;
+      // sybstring() : 문자열에서 첫 번째 문자(인덱스 0)를 제외한 나머지 부분을 반환
+      // # 지움
       const pageName = hash.substring(1);
       renderPage(pageName);
     });
